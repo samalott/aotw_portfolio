@@ -1,0 +1,664 @@
+/*#background {
+  background-color: black;
+  margin-left: 50px;
+  margin-top: 50px;
+}*/
+  
+#wrapper {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 100px;
+  width: 600px;
+  height: 800px;
+  background-image: url('https://samalott.github.io/section-one-fp/background.jpg');
+  background-size: cover;
+  background-origin: padding-box;
+  overflow: hidden;
+}
+
+#green-book { 
+  transform: skew(-45deg, 10deg);
+  overflow: visible;
+  position: absolute;
+  top: -200px;
+  left: -100px;
+  width: 700px;
+  height: 500px;
+  background-color: transparent;
+  border-radius: 0%;
+  z-index: 2;
+  /*box-shadow: 45px 25px 25px 20px rgba(24, 24, 47, .5);*/
+}
+
+#green-book-top { 
+  transform: skew(-45deg, 10deg);
+  overflow: visible;
+  position: absolute;
+  top: -200px;
+  left: -100px;
+  width: 700px;
+  height: 500px;
+  background-color: rgba(53, 116, 41, 1);
+  border-radius: 0%;
+  z-index:; 3;
+  /*box-shadow: 45px 25px 25px 20px rgba(24, 24, 47, .5);*/
+}
+
+#green-book-front{ 
+  transform: rotate(0deg) skew(0deg, 10deg);
+  overflow: visible;
+  position: absolute;
+  top: 310px;
+  left: -250px;
+  width: 600px;
+  height: 85px;
+  background-color: rgba(189, 182, 161, 1);
+  border-radius: 0%;
+  z-index: 4;
+  /*box-shadow: 5px 15px 10px rgba(12, 41, 103, 0.3);*/
+}
+
+#green-book-side { 
+  transform: rotate(45deg) skew(0deg, 45deg);
+  overflow: visible;
+  position: absolute;
+  top: -105px;
+  left: 530px;
+  width: 60px;
+  height: 600px;
+  background-color: rgba(55, 81, 56, 1);
+  border-radius: 0%;
+  z-index: 5;
+  /*box-shadow: 20px -10px 15px rgba(12, 41, 103, 0.6);*/
+}
+
+#green-book:hover { 
+  overflow: visible;
+  position: absolute;
+  transform: skew(0deg, 0deg) rotate(0deg);
+  top: -145px;
+  left: 0px;
+  width: 800px;
+  height: 1000px;
+  object-fit: cover;
+  object-position: -20px 0px;
+  content: url('https://samalott.github.io/section-one-fp/still-life.jpg');
+  border-radius: 0%;
+  clip-path: polygon(0% 0%, 80% 0%, 80% 30%, 50% 30%, 0% 45%);
+  /*box-shadow: 20px -10px 15px rgba(12, 41, 103, 0.6);*/
+}
+
+#white-book{ 
+  transform: skew(-70deg, 20deg) rotate(10deg);
+  overflow: visible;
+  position: absolute;
+  top: -360px;
+  left: 257px;
+  width: 600px;
+  height: 400px;
+  background-color: transparent;
+  border-radius: 0%;
+  z-index: 10;
+ /* box-shadow: 35px 0px 15px 5px rgba(24, 24, 47, .5);*/
+}
+
+#white-book-front{ 
+  transform: skew(0deg, -18deg);
+  overflow: visible;
+  position: absolute;
+  top: 28px;
+  left: 134px;
+  width: 600px;
+  height: 60px;
+  background-color: rgba(189, 182, 161, 1);
+  border-radius: 0%;
+  z-index: 8;
+  /*box-shadow: 20px 30px 10px 20px rgba(12, 41, 103, 0.3);*/
+}
+
+#white-book-top{ 
+  transform: skew(-70deg, 20deg) rotate(10deg);
+  overflow: visible;
+  position: absolute;
+  top: -360px;
+  left: 257px;
+  width: 600px;
+  height: 400px;
+  background-color: rgba(240, 235, 218, 1);
+  border-radius: 0%;
+  z-index: 7;
+ box-shadow: 35px 0px 15px 5px rgba(24, 24, 47, .5);
+}
+
+#white-book-side{ 
+  transform: skew(0deg, 46deg);
+  overflow: visible;
+  position: absolute;
+  top: -30px;
+  left: -166px;
+  width: 300px;
+  height: 60px;
+  background-color: rgba(175, 148, 65, 1);
+  border-radius: 0%;
+  z-index: 9;
+  /*box-shadow: -10px 10px 5px rgba(12, 41, 103, 0.4);*/
+}
+
+.red-text {
+  position: absolute;
+  rotate: 89deg;
+  writing-mode: vertical-rl;
+  margin-left: 350px;
+  margin-top: 290px;
+  font-size: 20px;
+  line-height: 60px;
+  letter-spacing: 0px;
+  font-stretch: extra-condensed;
+  white-space: nowrap;
+  font-family: "Arial Narrow";
+  font-weight: bold;
+  font-style: oblique;
+  color: rgba(191, 0, 30, 1);
+  z-index: 30;
+}
+
+.gray-text {
+  position: absolute;
+  rotate: 88deg;
+  writing-mode: vertical-rl;
+  margin-left: 330px;
+  margin-top: 220px;
+  font-size: 40px;
+  line-height: 35px;
+  letter-spacing: 0px;
+  font-stretch: extra-condensed;
+  font-family: "Arial Narrow";
+  font-weight: bold;
+  font-style: oblique;
+  color: rgba(78, 78, 78, 1);
+  z-index: 20;
+}
+
+.purple-text {
+  position: absolute;
+  rotate: -180deg;
+  writing-mode: vertical-rl;
+  margin-left: 530px;
+  margin-top: 200px;
+  font-size: 20px;
+  line-height: 60px;
+  letter-spacing: 0px;
+  font-stretch: extra-condensed;
+  white-space: nowrap;
+  font-family: "Arial Narrow";
+  font-weight: bold;
+  font-style: oblique;
+  color: rgba(76, 63, 164, 1);
+  z-index: 20;
+}
+
+#white-book:hover { 
+  overflow: hidden;
+  position: absolute;
+  transform: skew(0deg, 0deg) rotate(0deg);
+  top: -100px;
+  left: 0px;
+  width: 800px;
+  height: 350px;
+  object-fit: cover;
+  object-position: -36px -43px;
+  content: url('https://samalott.github.io/section-one-fp/still-life.jpg');
+  clip-path: polygon(0% 28%, 75% 28%, 75% 38%, 17% 82%, 0% 42%);
+  border-radius: 0%;
+  z-index: 10;
+}
+
+#cd-inner {
+  transform: rotate(-1deg);
+  overflow: visible;
+  position: absolute;
+  top: 150px;
+  left: -120px;
+  width: 1000px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  -webkit-mask-image: radial-gradient(130px 40px at 50% 40%, transparent 50% 1%, transparent 50% 1%, black 1% 95%);
+  filter: drop-shadow(40px 40px 10px rgba(12, 41, 103, 0.2));
+  z-index: 11;
+}
+
+#cd-rim {
+  transform: rotate(0deg);
+    overflow: visible;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1000px;
+    height: 400px;
+  background-color: black;
+    border-radius: 50%;
+    /*box-shadow: 10px 10px 10px inset rgba(12, 41, 103, 0.2);*/
+   -webkit-mask-image: radial-gradient(260px 90px at 50% 40%, transparent 50% 1%, transparent 50% 1%, black 1% 95%);
+}
+
+#cd {
+  transform: rotate(0deg);
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1000px;
+  height: 400px;
+  background-color: rgba(247, 223, 247,.9);
+  border-radius: 50%;
+  -webkit-mask-image: radial-gradient(370px 140px at 50% 40%, transparent 50% 1%, transparent 50% 1%, black 1% 99%);
+}
+
+#cd-rim:hover {
+  transform: rotate(0deg);
+  overflow: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  object-position: -50px -377px;
+  content: url('https://samalott.github.io/section-one-fp/still-life.jpg');
+border-radius: 50%;
+-webkit-mask-image: radial-gradient(140px 40px at 50% 40%, transparent 50% 1%, transparent 50% 1%, black 1% 99%);
+}
+
+#cd-shadow {
+  transform: rotate(-1deg);
+  overflow: visible;
+  position: absolute;
+  top: 140px;
+  left: -120px;
+  width: 1000px;
+  height: 400px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 65px 30px 15px 15px rgba(24, 24, 47, .7);
+}
+
+.lightreflection {
+  transform: rotate(0deg);  
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: repeating-conic-gradient(at 50% 40%, #999990 4deg 5deg, #00f2ff 5deg, #b8b8a7 8deg 55deg, #fcef35 55deg, #b8b8a7 57deg 73deg, #c970ff 75deg 77deg, #999990 85deg 110deg, #ff007b, #b8b8a7 115deg 150deg, #95ff00 150deg, #999990 170deg 174deg);
+}
+
+#link0 {
+  transform: rotate(5deg);
+  overflow: visible;
+  position: absolute;
+  mix-blend-mode: lighten;
+  top: 620px;
+  left: 465px;
+  width: 150px;
+  height: 100px;
+  background-color: #F0C192;
+  border-radius: 35%;
+  /*filter: drop-shadow(-5px 5px 5px rgba(12, 41, 103, 0.2));*/    
+}
+
+#link0:hover {
+  transform: rotate(0deg);
+  overflow: visible;
+  position: absolute;
+  top: 620px;
+  left: 465px;
+  width: 150px;
+  height: 100px;
+  object-fit: none;
+  object-position: 0px -50px;
+  content: url('https://lh3.googleusercontent.com/4Vv2o41Iqw15r2rdtakRI27LZEkNtR9YJZLFk0toDp-t0Tg14rcTr3c8UoMAXHiGwDdc-ELg-lK__9YB0FzbuVlZjeBWv-QRoHhTIrfWmURrRH-OTBcEDL2qkNtDntbQGJbRPGBnQALdHhjrNcA6noPOrsrnDkaE1kZzgJFXLrc4kdq9Xebqsu0Q1jOg6dhrPOcy62WjEOVaI3yFPJYaADgszJNH6Rr20Vk_Mgp2KxrXqQAvCkKDdp9B8ljqJx4-fn_BP3J-QXyjsFOz00RMNrg0j8FxCpgKS8TxKYxL5QdIvoABtsaTgjuRVayJtW7yvpN6kbiHBOhK5d1_QVQNS1P7fp_N_5oJNgeEPG4HitJDOeViv2Z61YSxMBYZ0v1RdtykyzeBZRLvaRkMf5AKmTaWTdEq6V0ek2l2yWcFekwirEAmU7ryZGVvaNlLGwbVRe7WBMBnd4ZpSpHScs4Mw20_LV-Uu8w8TOdvUSGRBu1siuMw-GpZJjhjMLS7ZKs4o7NOfek_lzArKv4uqdzItUMBTB3ZZKNYdZspLkF8pNu_vZHtW7dcIoOrFsqZK6JaK3aitbLdA2FW2gBA3a7ip0J2SN30CxyCFxs8d2T7hHu49jnHXip2ZeGoyBAAfe6KNOp_yO0-SRhcQchDyViEZBGuREeoPn-TOHqL9juOqgDct1R37VQWdttqmJ6pDt9OV-3CvBeziBVkYwbnSQ3dIsRFsLJr3WrhLI7PbPQlU5jaeDtu_UFRo0fZK5tOFYa15RbIbSlInm0taLBp2xatjVOb-A-yIKEleCBLF76MG86HgZLHpR8pFTYee04rQiURjBFBDy88AOsIZMTgq_YvuJI4-0Fr5Tr-x8y-NLgauyiPs2IEYCiN1ZZbIZYWF5Wbc-0PzIsqXDwlS0XgcNS2SDH33bz463gUHrVaP8UfQ0DBFQu_ZktoI-f7-DNczvVfoGD3cFHEW-uDpJtr5pCtfaiqbRj2HJGbR6OpTYhKJsiFiAC7NQvFSGGRU7btvDZaX3NOKyZD-gGTzXP8uoB-SmWZTA=w1353-h1803-no?authuser=0');
+  border-radius: 35%;
+  /*filter: drop-shadow(-5px 5px 5px rgba(12, 41, 103, 0.2));*/    
+}
+
+#link-hole0 {
+  transform: rotate(-1deg);
+  mix-blend-mode: multiply;
+  overflow: visible;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 75px;
+  height: 40px;
+  background-color: black;
+  border-radius: 30%;
+  /*box-shadow: 20px 10px 20px inset rgba(12, 41, 103, 0.1);*/
+}
+
+#link1 {
+  transform: rotate(-65deg);
+  overflow: visible;
+  position: absolute;
+  mix-blend-mode: lighten;
+  top: 600px;
+  left: 300px;
+  width: 150px;
+  height: 100px;
+  background-color: #F0C192;
+  border-radius: 35%;
+  /*filter: drop-shadow(-5px 5px 5px rgba(12, 41, 103, 0.2));*/    
+}
+
+#link-hole1 {
+  transform: rotate(-1deg);
+  mix-blend-mode: multiply;
+  overflow: visible;
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  border-radius: 30%;
+  /*box-shadow: 20px 10px 20px inset rgba(12, 41, 103, 0.1);*/
+}
+
+#link2 {
+  transform: rotate(40deg);
+  overflow: visible;
+  position: absolute;
+  mix-blend-mode: lighten;
+  top: 650px;
+  left: 150px;
+  width: 150px;
+  height: 100px;
+  background-color: #F0C192;
+  border-radius: 35%;
+  /*filter: drop-shadow(-5px 5px 5px rgba(12, 41, 103, 0.2));*/
+}
+
+#link-hole2 {
+  transform: rotate(-1deg);
+  mix-blend-mode: multiply;
+  overflow: visible;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 75px;
+  height: 40px;
+  background-color: black;
+  border-radius: 30%;
+  /*box-shadow: 20px 10px 20px inset rgba(12, 41, 103, 0.1);*/
+}
+
+#link3 {
+  transform: rotate(-35deg);
+  overflow: visible;
+  position: absolute;
+  mix-blend-mode: lighten;
+  top: 625px;
+  left: -25px;
+  width: 150px;
+  height: 100px;
+  background-color: #F0C192;
+  border-radius: 35%;
+  /*filter: drop-shadow(-5px 5px 5px rgba(12, 41, 103, 0.2));*/
+}
+
+#link-hole3 {
+  transform: rotate(-1deg);
+  mix-blend-mode: multiply;
+  overflow: visible;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 75px;
+  height: 40px;
+  background-color: black;
+  border-radius: 30%;
+  /*box-shadow: 20px 10px 20px inset rgba(12, 41, 103, 0.1);*/
+}
+
+#link-e {
+  transform: rotate(50deg);
+    overflow: visible;
+    position: absolute;
+    top: 600px;
+    left: -75px;
+    width: 150px;
+    height: 50px;
+    background-color: #F0C192;
+    border-radius: 30%;
+    drop-shadow: 20px 20px 20px rgba(12, 41, 103, 0.1);
+}
+
+#link-d {
+  transform: rotate(10deg);
+    overflow: visible;
+    position: absolute;
+    top: 645px;
+    left: 65px;
+    width: 150px;
+    height: 50px;
+    background-color: #F0C192;
+    border-radius: 30%;
+    /*box-shadow: 20px 10px 20px inset rgba(12, 41, 103, 0.1);*/
+}
+
+#link-c {
+  transform: rotate(-25deg);
+    overflow: visible;
+    position: absolute;
+    top: 660px;
+    left: 230px;
+    width: 150px;
+    height: 50px;
+    background-color: #F0C192;
+    border-radius: 30%;
+    /*box-shadow: 20px 20px 10px rgba(12, 41, 103, 0.1);*/
+}
+
+#link-b {
+  transform: rotate(15deg);
+    overflow: visible;
+    position: absolute;
+    top: 630px;
+    left: 385px;
+    width: 150px;
+    height: 50px;
+    background-color: #F0C192;
+    border-radius: 30%;
+    /*box-shadow: 20px 10px 20px inset rgba(12, 41, 103, 0.1);*/
+}
+
+#link-a {
+  transform: rotate(45deg);
+    overflow: hidden;
+    position: absolute;
+    top: 690px;
+    left: 530px;
+    width: 150px;
+    height: 50px;
+    background-color: #F0C192;
+    border-radius: 30%;
+    /*box-shadow: 20px 10px 20px inset rgba(12, 41, 103, 0.1);*/
+}
+
+.highlight1 {
+  box-shadow: 5px 5px 5px rgba(12, 41, 103, 0.4), -3px -3px 5px inset rgba(12, 41, 103, 0.2), -10px -10px 30px inset #F0C192, -30px -30px 25px inset white, 3px 3px 5px inset rgba(12, 41, 103, 0.2), 10px 10px 30px inset #F0C192, 30px 30px 25px inset white;
+}
+
+.highlight2 {
+  box-shadow: 10px 10px 20px rgba(12, 41, 103, 0.6), -3px -3px 5px inset rgba(12, 41, 103, 0.2), -10px -10px 30px inset #F0C192, -30px -30px 25px inset white, 3px 3px 5px inset rgba(12, 41, 103, 0.2), 10px 10px 30px inset #F0C192, 30px 30px 25px inset white;
+}
+
+.links:hover {
+  top: 200px;
+  height: 800px;
+  width: 600px;
+  /*isolation: isolate;
+  mix-blend-mode: screen;*/
+  filter: saturate(75%) brightness(125%) blur(1px);
+  object-fit: cover;
+  object-position: 0px 125px;
+  content: url('https://samalott.github.io/section-one-fp/chains.jpg');
+  clip-path: polygon(0% 77%, 6% 71%, 10% 71%, 15% 71%, 20% 74%, 22% 79%, 72% 80%, 84% 70%, 90% 71%, 95% 75%, 95% 81%, 87% 89%, 85% 89%, 78% 88%, 70% 90%, 65% 94%, 47% 94%, 42% 90%, 35% 90%, 10% 95%, 0% 90%);
+}
+
+.green-text {
+  position: absolute;
+  rotate: 0 0 1 90deg;
+  writing-mode: vertical-rl;
+  padding-left: 900px;
+  margin-top: -360px;
+  font-size: 80px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  z-index: 10;
+}
+
+/*.shadow {
+  box-shadow: -3px -3px 10px inset rgba(12, 41, 103, 0.2), 3px 3px 10px inset rgba(12, 41, 103, 0.2);
+}*/
+
+
+@keyframes pop-up {
+    from {visibility: hidden;}
+    to {visibility: visible;}
+}
+
+
+#home {
+    position: fixed;
+    visibility: hidden;
+    right: 10px;
+    bottom: 10px;
+    width: 250px;
+    animation-name: pop-up;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    z-index:30;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    letter-spacing: normal;
+}
+
+h2.index {
+    position: absolute;
+    margin-top: 195px;
+    margin-left: 180px;
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+#close {
+    position: absolute;
+    height: 16px;
+    width: 30px;
+    top: 2px;
+    right: 6px;
+    margin-top: 5px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: lightgray;
+    box-shadow: inset -2px -2px 1px rgba(0, 0, 0, .8), 
+    inset 2px 2px 1px rgba(255, 255, 255, .8);
+}
+
+#button {
+    position: absolute;
+    height: 42px;
+    width: 160px;
+    top: 65%;
+    left: 30%;
+    padding-top: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: inset -2px -2px 2px rgba(0, 0, 0, .8), 
+    inset 2px 2px 2px rgba(255, 255, 255, 1);
+}
+
+.outline {
+    position: absolute;
+    border-style: dotted;
+    border-color: black;
+    border-width: 2px;
+    background-color: transparent;
+    height: 28px;
+    width: 148px;
+    top: 67%;
+    left: 31%;
+}
+
+
+#home-top {
+    position: relative;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: white;
+    font-size: large;
+    background-color: blue;
+    box-shadow: inset -2px 0px 2px rgba(0, 0, 0, .8), 
+    inset 3px 4px 3px rgba(255, 255, 255, 1);
+    z-index: 30;
+}
+
+#home-body {
+    position: relative;
+    height: 100px;
+    padding-top: 15px;
+    padding-left: 1%;
+    padding-right: 1%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    background-color: lightgray;
+    color: black;
+    border-radius: 0%;
+    box-shadow: inset -2px -2px 2px rgba(0, 0, 0, .8), 
+    inset 2px 0px 2px rgba(255, 255, 255, .8);
+    z-index: 30;
+}
+
+#home_button {
+    position: absolute;
+    height: 42px;
+    width: 70px;
+    top: 52%;
+    left: 34%;
+    padding-top: 6px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 10pt;
+    font-weight: bold;
+    font-style: italic;
+    box-shadow: inset -2px -2px 2px rgba(0, 0, 0, .8), 
+    inset 2px 2px 2px rgba(255, 255, 255, 1);
+}
+
+.home_outline {
+    position: absolute;
+    border-style: dotted;
+    border-color: black;
+    border-width: 2px;
+    background-color: transparent;
+    height: 28px;
+    width: 56px;
+    top: 58%;
+    left: 36%;
+}
